@@ -1,10 +1,11 @@
 ---
-templateKey: 'blog-post'
-title: 'Finally a heading that makes sense'
+templateKey: blog-post
+title: Finally a heading that makes sense
 date: 2017-12-19T15:04:10.000Z
-featuredpost: true
-featuredimage: /img/image5.png
-description: Laudantium, quod reprehenderit deleniti id dolore nostrum aliquid velit doloribus sint atque quidem
+description: Laudantium, quod reprehenderit deleniti id dolore nostrum aliquid
+  velit doloribus sint atque quidem
+featuredpost: false
+featuredimage: /img/df158dd8-f9cf-4fcc-aca6-8d237d0853c3.png
 tags:
   - blog
   - dummy text
