@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.authors  = ["Mahendrata Harpi"]
   spec.email    = ["justharpi@gmail.com"]
 
-  spec.summary  = "🏖 Klisé is a minimalist Jekyll theme for running a personal site or blog, light & dark mode support."
-  spec.homepage = "https://github.com/piharpi/jekyll-klise"
-  spec.license  = "MIT"
+  spec.summary  = "Hanya mini blog untuk seorang yang hanya REBAHAN tiap saat."
+  # spec.homepage = "https://github.com/piharpi/jekyll-klise"
+  # spec.license  = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
   spec.files = `git ls-files -z`.split("\x0").select do |f|
