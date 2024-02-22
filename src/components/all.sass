@@ -1,0 +1,464 @@
+@import "~bulma/sass/utilities/initial-variables"
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+
+@import "~bulma"
+
+// Config vars
+$kaldi-red: #D64000
+$kaldi-red-invert: #fff
+
+$primary: $kaldi-red
+// $primary-invert: $kaldi-red-invert
+// $body-color: #333
+$black: #2b2523
+$white-ter: #c0b7b4
+  
+//========================================
+// ------------- Utilities ---------------
+//========================================
+.container
+  max-width: 1100px;
+  margin: 0 auto;
+  // overflow: auto;  
+  flex-grow: 0
+.flex
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%
+.flex-col
+  flex-direction: column
+.flex-col-around
+  flex-direction: column
+  justify-content: space-around
+.flex-around
+  justify-content: space-around
+.grid
+  display: grid !important
+  grid-template-columns: repeat(2, 1fr);  
+  justify-content: center;
+  height: 100%;
+  gap: 4em 5em
+.grid-3
+  grid-template-columns: repeat(3, 1fr);
+
+.card
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(104, 104, 104, 0.2);
+  padding: 20px;
+  margin: 10px;
+
+.card:hover
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+.center
+  justify-content: center !important
+  align-items: center !important
+  text-align: center !important  
+
+//========================================
+//-------------- Margins -----------------
+//========================================
+.my-1   
+  margin: 1rem 0 !important   
+.my-2   
+  margin: 1.5rem 0 !important 
+.my-3   
+  margin: 2rem 0 !important 
+.my-4   
+  margin: 3rem 0 !important 
+.my-5   
+  margin: 4rem 0 !important 
+
+.m-1   
+  margin: 1rem !important   
+.m-2   
+  margin: 1.5rem !important 
+.m-3   
+  margin: 2rem !important 
+.m-4   
+  margin: 3rem !important 
+.m-5   
+  margin: 4rem !important 
+
+.py-1   
+  padding: 1rem 0 !important   
+.py-2   
+  padding: 1.5rem 0 !important 
+.py-3   
+  padding: 2rem 0 !important 
+.py-4   
+  padding: 3rem 0 !important 
+.py-5   
+  padding: 4rem 0 !important 
+
+.p-1   
+  padding: 1rem !important   
+.p-2   
+  padding: 1.5rem !important 
+.p-3   
+  padding: 2rem !important 
+.p-4   
+  padding: 3rem !important 
+.p-5   
+  padding: 4rem !important
+
+//========================================
+// -------- Main classes -----------------
+//========================================
+html, body  
+  font-family: 'Open Sans'
+
+.navbar
+  box-shadow:none !important
+  margin-top: 3em !important
+.navbar-menu
+  flex-grow: 0 !important
+.navbar-start  
+  margin-right: 0 !important 
+.content .taglist
+  list-style: none
+  margin-bottom: 0
+  margin-left: 0
+  margin-right: 1.5rem
+  margin-top: 1.5rem
+  display: flex
+  flex-wrap: wrap
+  justify-content: left
+  align-items: center
+  li
+    padding: 0 2rem 1rem 0
+    margin-bottom: 1.5rem
+    margin-top: 0
+h1
+ font-family: 'Poiret One';
+
+.tag
+  background: #ddd
+  opacity: 0.62
+  border-radius: 20px
+  padding: 0.4em 1em !important 
+
+.section
+  padding: 2rem 1.5rem !important
+
+//========================================
+// -------- Bulma Helper Classes ---------
+//========================================
+.full-width-image-container
+  width: 100vw
+  height: 400px
+  position: relative
+  left: 50%
+  right: 50%
+  margin: 2em -50vw
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
+
+.full-width-image
+    width: 100vw
+    height: 400px
+    background-size: cover
+    background-position: bottom
+    display: flex
+    justify-content: center
+    align-items: center
+
+.btn
+    display: inline-block
+    padding: 12px 16px 10px
+    font-size: 18px
+    font-size: 1rem
+    line-height: 1.25
+    background-color: #fff
+    margin-top: 0
+    // border-radius: .25rem
+    text-decoration: none
+    font-weight: 700
+    color: #CC3700
+    text-align: center
+    -webkit-box-shadow: inset 0 0 0 2px #CC3700
+    box-shadow: inset 0 0 0 2px #f40
+    -webkit-transition: all .15s ease
+    transition: all .15s ease
+
+.margin-top-0
+  margin-top: 0 !important
+
+// .navbar-item .icon
+//   color: $primary
+// // Override for use of svg's from https://simpleicons.org/
+.icon svg
+  width: 1.5rem
+  height: 1.35rem
+  fill: currentColor
+
+.navbar-brand .navbar-item.logo
+  padding: 0 1rem
+footer.footer
+  padding: 2rem 0rem 0rem
+  background-color: transparent
+
+//========================================
+//------------ Menu overrides-------------
+//========================================
+$menu-item-color: $white-ter
+$menu-item-hover-color: $black !important
+$menu-item-hover-background-color: $black
+$menu-item-active-color: $kaldi-red-invert
+$menu-item-active-background-color:	$kaldi-red-invert
+$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-label-color: $white-ter
+
+.logo
+  font-size: 1.5rem;
+  display: flex
+  justify-content: space-between
+  align-items: center
+  
+.logo h1
+  margin-right: 15px
+  font-weight: 700 !important 
+  color: $black;
+  
+.menu-label
+  font-size: 1em !important
+  text-align: left
+.menu-list
+  list-style: none !important
+  text-align: left
+.menu-list li > a
+  color: $white-ter
+.social
+  padding: 2em
+.social a
+    padding: .5em .5em .3em .5em
+    border-radius: 1em
+    background-color: $white-ter
+    margin: .5em
+    width: 1em
+    height: 1em
+    vertical-align: middle
+    display: inline
+
+.featured-thumbnail
+  width: 100% !important
+  height: 2em !important
+//========================================
+// ---------- user classes ---------------
+//========================================
+.blog-list-item    
+    height: fit-content
+
+.blog-list-item.is-featured
+  background-color: #ddd
+
+.blog-list-item header
+  display: flex;  
+
+.blog-list-item .featured-thumbnail
+  flex-basis: 35%;
+
+.blogRollTitle  
+  color: #000000 !important
+  font-size: 1.22em !important
+  font-weight: 600 !important
+
+.blogRollDate
+  margin: 0.65em 0 !important
+  font-size: 0.85em
+  text-decoration: underline
+  font-style: italic 
+
+.blogRollExcerpt
+  margin-top: 0em !important
+  margin-bottom: 0.7em !important
+  overflow: hidden
+
+.blogPostDescription
+  margin-top: 0.5em
+  color: #454746 !important 
+
+.blogPostedDetails
+  font-style: italic !important
+  font-family: 'Poppins' !important
+  font-size: 0.9em  
+
+.blogPostAuthor, .blogPostDate
+  text-decoration: underline !important
+.search-list-container
+  width: 100vw
+  display: flex
+  flex-direction: column
+  position: absolute
+  margin-top: 1em
+  z-index: 100
+.search-input,
+.search-list,
+  width: 20%
+  margin: 0 auto
+.search-input
+  padding: 10px
+  border-radius: 2em
+  border: 1px solid grey
+  z-index: 110
+.search-list
+  padding-top: 2em
+  margin-top: -2em
+  z-index: 105
+
+.search-list-item > a
+  background: #f2efeb
+  display: block
+  font-size: 0.9em
+  padding: 10px
+  margin: 5px
+  border-radius: 1em
+
+.scroll-to-top::before
+  content: url('../img/chevron-up-solid.svg')
+  padding: 7px
+  justify-content: center
+  align-items: center
+  opacity: 0.35
+  background: #ddd
+  border-radius: 35%
+  width: 2.3em
+  height: 2.3em
+  position: fixed
+  right: 1em
+  bottom: 1em
+  cursor: pointer
+
+.scroll-to-top:hover::before
+  padding: 7px
+  opacity: 0.8
+// .blogPostContent p:nth-child(1)    
+//   width: 100vw !important
+//   margin: 0 !important
+//   margin-left: -50% !important
+
+.line
+  width: 100% !important
+  height: 1px
+  background: #141414 !important
+  margin: 1em auto !important
+
+.blogPostFeatureImage
+  height: 30em !important
+  width: 100vw !important
+  object-fit: cover
+
+.blogContainer, .blogPostContentsContainer
+  width: 80vw
+  margin: 4em auto
+  position: relative
+
+.blogPostContentsContainer
+  width: 50vw
+
+.blogPostContentsContainer h1, 
+.blogPostContentsContainer h2,
+.blogPostContentsContainer h3, 
+.blogPostContentsContainer h4,
+.blogPostContentsContainer h5,
+.blogPostContentsContainer h6, 
+.blogPostContentsContainer p, 
+.blogPostContentsContainer ul, 
+.blogPostContentsContainer ol, 
+.blogPostContentsContainer li, 
+.blogPostContentsContainer span
+  color: #000 !important
+  font-family: 'Poppins' !important
+  position: relative
+  width: fit-content
+  margin-top: 1em
+.blogPostContentsContainer p
+  text-align: justify
+  width: 100% !important
+.blogPostContentsContainer p img
+  margin: 1.5em auto !important
+  width: 100em
+.blogPostContent li
+  width: 100%
+  text-align: justify  
+.blogPostContentsContainer h1::after,
+.blogPostContentsContainer h2::after,
+.blogPostContentsContainer h3::after,
+.blogPostContentsContainer h4::after
+  position: absolute
+  margin-top: -0.45em
+  margin-left: -10px
+  display: block
+  width: 107%
+  height: 0.5em
+  background: #EFF239  
+  content: ''
+  z-index: -1
+  border-bottom: 2px solid #ddd
+
+.blogPostContentsContainer h2::after
+  background: #a5f1b1
+  
+.blogPostContentsContainer h3::after 
+  background: #9cf5f0 
+  
+.is-featured
+  background: white !important
+
+.recent-posts
+  color: #848383 !important
+ 
+ 
+//========================================
+//------------ responsiveness ------------
+//========================================
+@media (max-width: 800px)
+  .blog-list-item .featured-thumbnail
+    flex-basis: 50%;
+  .grid-3
+    grid-template-columns: repeat(2, 1fr) !important 
+  .blogContainer
+    font-size: 0.85em !important
+  .blogPostContentsContainer
+    width: 65vw !important
+  .search-input,
+  .search-list
+    width: 40%
+@media (max-width: 500px)
+  .main-heading
+    margin: 0 !important
+    text-align: center !important
+  .search-box
+    width: 50vw
+  .blog-list-item header
+    display: block
+  .blog-list-item .featured-thumbnail
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 1em;  
+  .grid-3
+    grid-template-columns: 1fr !important    
+  .section
+    padding: 1rem !important
+  .featured-thumbnail
+    height: fit-content !important
+  .blogContainer
+    font-size: 0.8em !important
+    width: 85vw !important
+    margin: 2em auto !important
+  .blogPostContentsContainer
+    width: 75vw !important
+    text-align: justify
+  .search-input,
+  .search-list
+    width: 70%

@@ -7,14 +7,30 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+---
+name: Feature request
+about: Suggest an idea for this project
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+---
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+<!-- Please don't delete this template or we'll close your issue -->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Feature request
+
+<!-- Issues which contain questions or support requests will be closed. -->
+<!-- Before creating an issue please make sure you are using the latest version of webpack. -->
+<!-- Check if this feature need to be implemented in a plugin or loader instead -->
+<!-- If yes: file the issue on the plugin/loader repo -->
+<!-- Features related to the development server should be filed on this repo instead -->
+
+**What is the expected behavior?**
+
+
+**What is motivation or use case for adding/changing the behavior?**
+
+
+**How should this be implemented in your opinion?**
+
+
+**Are you willing to work on this yourself?**
+yes

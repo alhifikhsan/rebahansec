@@ -1,61 +1,158 @@
-# Klisé
+# Silverlux
 
-Klisé is minimalist Jekyll theme for running a personal site and blog running on Jekyll.<br>
-For demo <a href="https://klise.now.sh" target="_blank" rel="noopener">klise.now.sh</a>
+<div align="center" style="margin-bottom:30px">
+    
+[![Version](https://img.shields.io/badge/version-v1.4-yellowgreen)]()
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2d7cd51-5e77-45c1-9f57-a760980affb3/deploy-status)](https://app.netlify.com/sites/silverlux/deploys)
+<a href="https://twitter.com/intent/tweet?text=Silverlux:%20A%20Modern%20Gatsby%20andNetlifyCMS%20based%20starter%20template%3A&url=https%3A%2F%2Fgithub.com%2Fsimarmannsingh%2Fsilverlux">
+<img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsimarmannsingh%2Fsilverlux">
+</a>
+</div>
+
+<div align="center"  style="margin-bottom:30px">
+    <img src="src/img/silverlux.webp" alt="Logo" />
+</div>
+
+
+--------------------------------------------------------------------
+
+[**LIVE DEMO**](https://silverlux.netlify.app/)
+
+NOTE: Identity update - `Gatsby-netlifycms-starter-template` is now **`Silverlux`**
+
+A fully-responsive [Gatsby](https://www.gatsbyjs.org/) based web-app template which can be easily hosted on any platform. This web-app uses the [Netlify CMS](https://www.netlifycms.org) as its content management system.
+
+It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution. Surely you can use a different host. Netlify CMS and Netlify are two different products and not to be confused as one dependent on another. You are free to use both in combination and separately as well.
+
+A detailed blog post on how you can use this template for your blog (for free obviously) can be found [**here**](https://simarmannsingh.com/blog/2021-04-22-how-to-create-your-personal-blog-for-free)
+
+
+## Getting Started
+
+There are two ways you can use this template 
+
+1. First Approach(**Recommended**)
+   Use the button below and it'll automatically take you to the netlify and ask you to create a repository on your behalf in Github/Gitlab/Bitbucket as per you select. This is the recommended approach as it automatically takes care of all the process steps. You don't need to do anything else.
+
+   <a href="https://app.netlify.com/start/deploy?repository=https://github.com/simarmannsingh/silverlux&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+
+2. Second Approach
+   Do it manually. It requires you to clone/fork this repository in your Github account, and setup the development environment in your system, install all the dependencies and then setup netlify account to pull the github published code for deployment. This approach is for advanced users as it allows users to edit the code and tweak the code as per preferences and it requires knowledge of code, development environment, deployment etc.  
 
 ## Features
 
-- [x] Light & Dark Mode support :waxing_crescent_moon:
-- [x] Customizable (using `.scss`)
-- [x] Responsive (desktop, tab and mobile)
-- [x] Mobile First Design
-- [x] SEO Optimized
-- [x] Images of post Organized ([`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles))
-- [x] Generate Sitemap ([`jekyll-sitemap`](https://github.com/jekyll/jekyll-sitemap))
-- [x] RSS Feed ([`jekyll-feed`](https://github.com/jekyll/jekyll-feed))
-- [x] Syntax Highlighter ([`rouge`](https://github.com/rouge-ruby/rouge))
-- [x] Next & Previous Post
-- [x] Comment layout, enable in frontmatter if you wish
-- [x] Google analytics
-- [x] HTML Minify ([`jekyll-compress-html`](https://github.com/penibelst/jekyll-compress-html))
-- [x] W3C **Validated**
-- [x] Lighthouse and PageSpeed **Passed**
+- A simple blogging web-app built with Netlify CMS
+- Editable Pages: About, Blog-Collection and Contact page with Netlify Form support
+- Custom 404 page
+- Tags support: Separate page for posts under each tag
+- Scroll to Top button on every page
+- Create Blog posts from Netlify CMS
+- Uses Bulma for styling, but size is reduced by `purge-css-plugin`
+- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
+- Uses `gatsby-image` with Netlify-CMS preview support
+- Separate components for everything
+- Perfect score on Lighthouse for SEO, Accessibility and Performance
+- Comment and Like functionality
+- Cookie Consent
 
-![Lighthouse Result](./lighthouse.png)
+## New Features in v1.4
+- Full text Search functionality powered by Fuse.js
+## Customization required for Comment functionality
+For ease of access, the comment functionality provided by Disqus, has been added.<br/>
+However, slight configure is required to make it fully functional.
 
-## Backlogs
+1. Register your website on the disqus platform, you'll get a shortname
+2. Update the shortname assigned to the Environment variable `DISQUS_SHORTNAME` [here](/.env). Save it
+3. If deploying on services like Heroku (free tier is over, it is paid now, but you're rich ? :p), make sure to add this environment variable to the service as well.
 
-- [ ] Intergrated with PhotoSwipe.
-- [ ] Add schema.org meta information.
-- [ ] Transform class selector to BEM metodology.
+A detailed blog post on how to configure the Disqus plugin can be found [here](https://simarmannsingh.com/blog/2022-02-25-setup-comment-functionality-for-your-gatsby-based-blog/)
 
-## Installation
+## Prerequisites for the development environment
 
-Run local server:
+For local development, you need
+- Node (v8.2.0 or higher)
+- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+- [Netlify CLI](https://github.com/netlify/cli)
 
-```bash
-$ git clone https://github.com/piharpi/jekyll-klise.git
-$ cd jekyll-klise
-$ bundle install
-$ bundle exec jekyll serve
+## Running Locally
+
+To run or test the changes locally, simply follow these steps.
+ - Use the right version of node, if you use nvm
+    ```sh
+    nvm use 14.20
+    ``` 
+
+    If you don't use nvm to manage the Node version in use, oh boy,..phew!
+
+ - Install all the dependencies using
+   ```sh
+   yarn install
+   ```
+
+ -  After installing the dependencies, simply start for development mode
+    ```sh
+    yarn start
+    ```
+
+ -  You can also create a production build for manual deployment using
+    ```sh
+    yarn build
+    ```
+
+Note: You can use Netlify CMS locally, just open another terminal and run the following command
+```sh
+npx netlify-cms-proxy-server
 ```
 
-Navigate to `localhost:4000`. You're Welcome, Fork and be Stargazer.
+and start run `gatsby develop`.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piharpi/jekyll-klise) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/piharpi/jekyll-klise) [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=javascript-0000-jopapa#create/Microsoft.StaticApp)
+### Setting up the CMS
 
-## Limitation
+Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting. You would need to enable Identity in the Netlify account if you are using Netlify for website deployment.
 
-- Since [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles#compatibility) plugin isn't supported by github pages, this cause will make your site problems, path broken or post images won't show up, you can host alternatively using likes [netlify.com](https://netlify.com), [vercel.com](https://vercel.com), [azure.com](https://docs.microsoft.com/azure/static-web-apps/publish-jekyll) or [surge.sh](https://surge.sh) services, which support 3rd party.
+### Debugging
 
-## Contributing
+Windows users might encounter `node-gyp` errors when trying to npm install.
+To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
 
-If you see any typos or formatting errors in a post, or want to helping reduce backlogs or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!, please read [contributing](./CONTRIBUTING.md) before PR.
+```
+npm config set python python2.7
+npm install --global --production windows-build-tools
+```
 
-Yeaaa feel free to open a pull request.
-## Support
+[Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W7MJ4X) [![saweria.co](./assets/img/saweria-button.png)](https://saweria.co/piharpi)
+MacOS users might also encounter some errors, for more info check [node-gyp](https://github.com/nodejs/node-gyp). We recommend using the latest stable node version.
+
+### Purgecss
+
+This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds which usually generate a ~170Kb of .css file are reduced 90% by purgecss resulting in a .css file which at max is 16-18Kb.
+
+## Contribution
+
+Contributions are always welcome, no matter how large or small. Before contributing,
+please read the [code of conduct](CODE_OF_CONDUCT.md).
+
+### A Screenshot of the Blog Post. [Old]
+**Disclaimer**: _Screenshots are old. I'm too lazy to take fresh screenshots again._
+
+### Main Page
+<div align="center"  style="margin-bottom:30px">
+    <img src="src/img/gatsbyBasedBlog1.png" alt="screenshot"/>
+</div>
+
+### Blog Post
+
+Update: The blog post now also features comment section and Cookie Consent.
+
+<div align="center"  style="margin-bottom:30px">
+    <img src="src/img/gatsbyBasedBlog_blogPost1.png" alt="blog post screenshot"/>
+</div>
+
+## Upcoming Features in Next versions (TODO)
+- Dark Theme
+
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This repository has MIT license which can be found [here](https://github.com/simarmannsingh/silverlux/blob/master/LICENSE).
