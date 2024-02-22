@@ -94,7 +94,7 @@ const Footer = class extends React.Component {
               </div>
             </div>
           </div>
-          <p style={{paddingBottom:'1em', color:'#7c7c7c'}}>Copyright © Rebahan Sec & Themes by <Link to="https://github.com/simarmannsingh"> simarmannsingh </Link> | 2024 </p>
+          <p style={{paddingBottom:'1em', color:'#7c7c7c'}}>Copyright © Rebahan Sec & Themes by <Link to="https://github.com/simarmannsingh"> simarmannsingh </Link> </p>
         </div>
       </footer>
     )
